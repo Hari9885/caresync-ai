@@ -1,0 +1,86 @@
+{
+  "timing": {
+    "once": {
+      "keywords": ["once daily", "once a day", "once", "od", "o.d.", "1x daily", "1x", "one time", "qd"],
+      "display": "Once a day",
+      "icon": "🌅",
+      "slots": ["Morning"],
+      "voice": "once a day in the morning"
+    },
+    "twice": {
+      "keywords": ["twice daily", "twice a day", "twice", "bd", "b.d.", "bid", "b.i.d.", "2x daily", "2x", "two times"],
+      "display": "Twice a day",
+      "icon": "🌅🌙",
+      "slots": ["Morning", "Night"],
+      "voice": "twice a day, in the morning and at night"
+    },
+    "thrice": {
+      "keywords": ["thrice daily", "thrice a day", "thrice", "tid", "t.i.d.", "tds", "t.d.s.", "3x daily", "3x", "three times"],
+      "display": "Three times a day",
+      "icon": "🌅☀️🌙",
+      "slots": ["Morning", "Afternoon", "Night"],
+      "voice": "three times a day, in the morning, afternoon, and at night"
+    },
+    "four_times": {
+      "keywords": ["four times daily", "four times a day", "qid", "q.i.d.", "4x daily", "4x", "four times"],
+      "display": "Four times a day",
+      "icon": "🌅☀️🌆🌙",
+      "slots": ["Morning", "Afternoon", "Evening", "Night"],
+      "voice": "four times a day, in the morning, afternoon, evening, and at night"
+    },
+    "at_night": {
+      "keywords": ["at night", "at bedtime", "hs", "h.s.", "bedtime", "before sleep", "night only"],
+      "display": "At night before sleep",
+      "icon": "🌙",
+      "slots": ["Night"],
+      "voice": "at night before going to sleep"
+    },
+    "morning_only": {
+      "keywords": ["in the morning", "morning only", "am", "morning"],
+      "display": "In the morning",
+      "icon": "🌅",
+      "slots": ["Morning"],
+      "voice": "in the morning"
+    },
+    "sos": {
+      "keywords": ["sos", "as needed", "when needed", "prn", "p.r.n.", "as required", "if needed"],
+      "display": "As needed (SOS)",
+      "icon": "🆘",
+      "slots": ["When needed"],
+      "voice": "only when needed, as prescribed by your doctor"
+    }
+  },
+  "food": {
+    "before": {
+      "keywords": ["before food", "before meals", "before eating", "empty stomach", "on empty stomach", "bf", "ac", "a.c.", "ante cibum"],
+      "display": "Before food",
+      "icon": "🍽️⬅️",
+      "voice": "before eating food"
+    },
+    "after": {
+      "keywords": ["after food", "after meals", "after eating", "with food", "with meals", "af", "pc", "p.c.", "post cibum"],
+      "display": "After food",
+      "icon": "🍽️✅",
+      "voice": "after eating food"
+    },
+    "with_water": {
+      "keywords": ["with water", "with plenty of water", "with a glass of water"],
+      "display": "With water",
+      "icon": "💧",
+      "voice": "with a glass of water"
+    }
+  },
+  "defaults": {
+    "timing": {
+      "display": "As prescribed by doctor",
+      "icon": "👨‍⚕️",
+      "slots": ["As directed"],
+      "voice": "as prescribed by your doctor"
+    },
+    "food": {
+      "display": "Follow doctor's advice",
+      "icon": "👨‍⚕️",
+      "voice": "follow your doctor's advice regarding food"
+    }
+  }
+}

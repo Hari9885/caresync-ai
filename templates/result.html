@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your prescription analyzed by CareSync AI — simplified medicine instructions with icons and voice guidance.">
+    <title>Your Medicine Guide – CareSync AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="results-page">
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">💊</span>
+            <span class="nav-title">CareSync <span class="nav-ai">AI</span></span>
+        </div>
+        <a href="/" class="nav-back-btn" id="nav-back-btn">← New Prescription</a>
+    </nav>
+
+    <main class="main-content results-main">
+        <!-- Results Header -->
+        <section class="results-header" id="results-header">
+            <h1 class="results-title">
+                <span class="results-icon">✅</span>
+                Your Medicine Guide
+            </h1>
+            <p class="results-subtitle">Here's your prescription simplified with clear instructions</p>
+            
+            <!-- Original Prescription -->
+            <div class="original-rx glass-card" id="original-rx">
+                <div class="rx-label">📄 Original Prescription</div>
+                <div class="rx-text">{{ results.original_text }}</div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="results-actions">
+                {% if results.medicines %}
+                <button class="action-btn listen-all-btn" id="listen-all-btn" onclick="speakAll()">
+                    <span class="action-icon">🔊</span>
+                    Read All Instructions
+                </button>
+                <button class="action-btn stop-btn" id="stop-btn" onclick="stopSpeech()" style="display:none;">
+                    <span class="action-icon">⏹️</span>
+                    Stop
+                </button>
+                {% endif %}
+                <button class="action-btn print-btn" id="print-btn" onclick="window.print()">
+                    <span class="action-icon">🖨️</span>
+                    Print
+                </button>
+                {% if results.medicines %}
+                <button class="action-btn copy-btn" id="copy-btn" onclick="copyGuide()">
+                    <span class="action-icon">📋</span>
+                    <span class="copy-label">Copy Guide</span>
+                </button>
+                {% endif %}
+                <a href="/" class="action-btn new-btn" id="new-rx-btn">
+                    <span class="action-icon">📝</span>
+                    New Prescription
+                </a>
+            </div>
+        </section>
+
+        <!-- Day at a Glance -->
+        {% if results.schedule %}
+        <section class="day-glance" id="day-glance">
+            <div class="glance-card glass-card">
+                <div class="rx-label">🗓️ Your Day at a Glance</div>
+                <div class="glance-grid">
+                    {% for slot, meds in results.schedule.items() %}
+                    <div class="glance-slot">
+                        <span class="time-slot">
+                            {% if slot == 'Morning' %}🌅
+                            {% elif slot == 'Afternoon' %}☀️
+                            {% elif slot == 'Evening' %}🌆
+                            {% elif slot == 'Night' %}🌙
+                            {% elif slot == 'When needed' %}🆘
+                            {% else %}👨‍⚕️
+                            {% endif %}
+                            {{ slot }}
+                        </span>
+                        <ul class="glance-meds">
+                            {% for name in meds %}
+                            <li>{{ name }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- Medicine Cards -->
+        <section class="medicine-cards" id="medicine-cards">
+            {% for med in results.medicines %}
+            <div class="medicine-card glass-card" id="medicine-card-{{ loop.index }}" style="animation-delay: {{ loop.index0 * 0.1 }}s;">
+                <!-- Card Header -->
+                <div class="med-header">
+                    <div class="med-icon-wrapper">
+                        <span class="med-emoji">{{ med.icon }}</span>
+                    </div>
+                    <div class="med-name-block">
+                        <h2 class="med-name">{{ med.name }}</h2>
+                        <span class="med-key">{{ med.key }}</span>
+                    </div>
+                    <button class="voice-btn" id="voice-btn-{{ loop.index }}" onclick="speakMedicine({{ loop.index0 }})" aria-label="Listen to instructions for {{ med.name }}">
+                        <span class="voice-icon">🔊</span>
+                        <span class="voice-label">Listen</span>
+                    </button>
+                </div>
+
+                <!-- Timing Section -->
+                <div class="med-section timing-section">
+                    <div class="section-label">
+                        <span class="label-icon">⏰</span>
+                        Timing
+                    </div>
+                    <div class="timing-display">
+                        <span class="timing-icon">{{ med.timing.icon }}</span>
+                        <span class="timing-text">{{ med.timing.display }}</span>
+                    </div>
+                    <div class="time-slots">
+                        {% for slot in med.timing.slots %}
+                        <span class="time-slot">
+                            {% if slot == 'Morning' %}🌅
+                            {% elif slot == 'Afternoon' %}☀️
+                            {% elif slot == 'Evening' %}🌆
+                            {% elif slot == 'Night' %}🌙
+                            {% elif slot == 'When needed' %}🆘
+                            {% else %}👨‍⚕️
+                            {% endif %}
+                            {{ slot }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Food Section -->
+                <div class="med-section food-section">
+                    <div class="section-label">
+                        <span class="label-icon">🍽️</span>
+                        Food Instruction
+                    </div>
+                    <div class="food-display">
+                        <span class="food-icon">{{ med.food.icon }}</span>
+                        <span class="food-text">{{ med.food.display }}</span>
+                    </div>
+                </div>
+
+                <!-- Purpose Section -->
+                <div class="med-section purpose-section">
+                    <div class="section-label">
+                        <span class="label-icon">ℹ️</span>
+                        Purpose
+                    </div>
+                    <div class="purpose-box">
+                        {{ med.purpose }}
+                    </div>
+                </div>
+
+                <!-- Warning Section -->
+                <div class="med-section warning-section">
+                    <div class="section-label">
+                        <span class="label-icon">⚠️</span>
+                        Important Warning
+                    </div>
+                    <div class="warning-box">
+                        {{ med.warning }}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- Unrecognized Medicines -->
+            {% if results.unrecognized %}
+            <div class="unrecognized-card glass-card" id="unrecognized-card">
+                <div class="unrecognized-header">
+                    <span class="unrec-icon">❓</span>
+                    <h3>Unrecognized Items</h3>
+                </div>
+                <p class="unrec-desc">The following items could not be identified. Please consult your pharmacist:</p>
+                <ul class="unrec-list">
+                    {% for item in results.unrecognized %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+        </section>
+
+        <!-- Disclaimer -->
+        <section class="disclaimer" id="disclaimer">
+            <div class="disclaimer-card glass-card">
+                <p>
+                    <strong>⚕️ Disclaimer:</strong> CareSync AI provides general guidance only. 
+                    Always follow your doctor's specific instructions. This tool is not a substitute 
+                    for professional medical advice. If in doubt, consult your pharmacist or doctor.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <p class="footer-brand">💊 CareSync AI</p>
+            <p class="footer-text">Making healthcare accessible for everyone</p>
+        </div>
+    </footer>
+
+    <!-- Pass medicine data to JavaScript for voice synthesis -->
+    <script>
+        const medicineData = [
+            {% for med in results.medicines %}
+            {
+                name: {{ med.name | tojson }},
+                voiceText: {{ med.voice_text | tojson }}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ];
+    </script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

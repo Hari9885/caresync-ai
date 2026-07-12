@@ -1,0 +1,236 @@
+{
+  "paracetamol": {
+    "name": "Paracetamol",
+    "purpose": "Used to reduce fever and relieve mild to moderate pain such as headache, toothache, and body ache",
+    "warning": "Do not exceed 4g (8 tablets) per day. Avoid alcohol. May cause liver damage in overdose. Consult doctor if fever persists beyond 3 days.",
+    "icon": "💊"
+  },
+  "amoxicillin": {
+    "name": "Amoxicillin",
+    "purpose": "Antibiotic used to treat bacterial infections including ear, nose, throat, urinary, and skin infections",
+    "warning": "Complete the full course even if you feel better. May cause allergic reactions (rash, swelling). Inform doctor if allergic to penicillin.",
+    "icon": "💊"
+  },
+  "azithromycin": {
+    "name": "Azithromycin",
+    "purpose": "Antibiotic used to treat respiratory infections, ear infections, and skin infections",
+    "warning": "Complete the full course. May cause nausea or diarrhea. Avoid antacids 2 hours before or after taking this medicine.",
+    "icon": "💊"
+  },
+  "cetirizine": {
+    "name": "Cetirizine",
+    "purpose": "Antihistamine used to relieve allergy symptoms like runny nose, sneezing, itching, and watery eyes",
+    "warning": "May cause drowsiness. Avoid driving or operating heavy machinery. Do not take with alcohol.",
+    "icon": "💊"
+  },
+  "ibuprofen": {
+    "name": "Ibuprofen",
+    "purpose": "Used to reduce pain, inflammation, and fever. Commonly used for headache, dental pain, and muscle pain",
+    "warning": "Take with food to avoid stomach irritation. Not recommended for patients with stomach ulcers or kidney problems. Avoid long-term use.",
+    "icon": "💊"
+  },
+  "metformin": {
+    "name": "Metformin",
+    "purpose": "Used to control blood sugar levels in Type 2 diabetes",
+    "warning": "Take with meals. May cause stomach upset initially. Do not skip doses. Regular blood sugar monitoring is recommended.",
+    "icon": "💊"
+  },
+  "pantoprazole": {
+    "name": "Pantoprazole",
+    "purpose": "Used to reduce stomach acid. Treats acidity, heartburn, and gastric ulcers",
+    "warning": "Take on an empty stomach, 30 minutes before meals. Long-term use may affect calcium absorption. Consult doctor for use beyond 8 weeks.",
+    "icon": "💊"
+  },
+  "omeprazole": {
+    "name": "Omeprazole",
+    "purpose": "Used to treat acid reflux, heartburn, and stomach ulcers by reducing acid production",
+    "warning": "Take before meals. Not recommended for long-term use without doctor's advice. May interact with blood thinners.",
+    "icon": "💊"
+  },
+  "ranitidine": {
+    "name": "Ranitidine",
+    "purpose": "Used to reduce stomach acid and treat acidity, heartburn, and ulcers",
+    "warning": "Take 30 minutes before meals. Avoid excessive use. Consult doctor if symptoms persist.",
+    "icon": "💊"
+  },
+  "aspirin": {
+    "name": "Aspirin",
+    "purpose": "Used as a pain reliever, anti-inflammatory, and blood thinner to prevent heart attacks",
+    "warning": "Not recommended for children under 16. Take with food. May increase bleeding risk. Inform doctor before any surgery.",
+    "icon": "💊"
+  },
+  "metronidazole": {
+    "name": "Metronidazole",
+    "purpose": "Antibiotic used to treat infections caused by bacteria and parasites, including dental and stomach infections",
+    "warning": "Strictly avoid alcohol during and 48 hours after treatment. Complete the full course. May cause metallic taste.",
+    "icon": "💊"
+  },
+  "ofloxacin": {
+    "name": "Ofloxacin",
+    "purpose": "Antibiotic used to treat bacterial infections of the urinary tract, respiratory tract, and skin",
+    "warning": "Avoid excessive sun exposure. Stay well hydrated. May cause dizziness. Complete the full course.",
+    "icon": "💊"
+  },
+  "ciprofloxacin": {
+    "name": "Ciprofloxacin",
+    "purpose": "Antibiotic used to treat urinary tract infections, respiratory infections, and gastrointestinal infections",
+    "warning": "Avoid dairy products and antacids near dosing time. Stay hydrated. May cause tendon problems in rare cases.",
+    "icon": "💊"
+  },
+  "diclofenac": {
+    "name": "Diclofenac",
+    "purpose": "Used to relieve pain and reduce inflammation in conditions like arthritis, sprains, and injuries",
+    "warning": "Take with food. Avoid in patients with heart or kidney problems. Not for long-term use without doctor's advice.",
+    "icon": "💊"
+  },
+  "amlodipine": {
+    "name": "Amlodipine",
+    "purpose": "Used to treat high blood pressure and chest pain (angina)",
+    "warning": "Do not stop suddenly. May cause swelling in ankles. Take at the same time daily. Avoid grapefruit juice.",
+    "icon": "💊"
+  },
+  "atenolol": {
+    "name": "Atenolol",
+    "purpose": "Used to treat high blood pressure and prevent heart attacks",
+    "warning": "Do not stop suddenly — may worsen heart condition. May cause dizziness. Take regularly at the same time.",
+    "icon": "💊"
+  },
+  "losartan": {
+    "name": "Losartan",
+    "purpose": "Used to treat high blood pressure and protect kidneys in diabetic patients",
+    "warning": "May cause dizziness when standing up. Avoid potassium supplements. Not safe during pregnancy.",
+    "icon": "💊"
+  },
+  "atorvastatin": {
+    "name": "Atorvastatin",
+    "purpose": "Used to lower cholesterol levels and reduce the risk of heart disease",
+    "warning": "Take at night for best results. Avoid excessive alcohol. Report any unexplained muscle pain to doctor.",
+    "icon": "💊"
+  },
+  "levothyroxine": {
+    "name": "Levothyroxine",
+    "purpose": "Used to treat hypothyroidism (underactive thyroid gland)",
+    "warning": "Take on an empty stomach, 30-60 minutes before breakfast. Do not stop without doctor's advice. Regular thyroid tests needed.",
+    "icon": "💊"
+  },
+  "montelukast": {
+    "name": "Montelukast",
+    "purpose": "Used to prevent asthma attacks and relieve seasonal allergies",
+    "warning": "Take in the evening. Not for acute asthma attacks. Report mood changes to doctor immediately.",
+    "icon": "💊"
+  },
+  "salbutamol": {
+    "name": "Salbutamol",
+    "purpose": "Inhaler medicine used to relieve breathing difficulty in asthma and COPD",
+    "warning": "Use only when needed. Shake inhaler before use. Rinse mouth after use. Seek emergency help if breathing worsens.",
+    "icon": "💊"
+  },
+  "domperidone": {
+    "name": "Domperidone",
+    "purpose": "Used to treat nausea, vomiting, and bloating",
+    "warning": "Take 15-30 minutes before meals. Not recommended for long-term use. May cause dry mouth.",
+    "icon": "💊"
+  },
+  "ondansetron": {
+    "name": "Ondansetron",
+    "purpose": "Used to prevent nausea and vomiting caused by surgery, chemotherapy, or other medications",
+    "warning": "May cause headache or constipation. Take as directed by doctor. Inform doctor about heart conditions.",
+    "icon": "💊"
+  },
+  "loperamide": {
+    "name": "Loperamide",
+    "purpose": "Used to treat acute diarrhea",
+    "warning": "Do not use for more than 2 days without doctor's advice. Stay well hydrated. Not for use in children under 6.",
+    "icon": "💊"
+  },
+  "vitamin-c": {
+    "name": "Vitamin C",
+    "purpose": "Supplement to boost immunity and support healing. Helps in recovery from cold and flu",
+    "warning": "High doses may cause stomach upset. Take with food. Generally safe for most people.",
+    "icon": "💊"
+  },
+  "vitamin-b-complex": {
+    "name": "Vitamin B Complex",
+    "purpose": "Supplement containing B vitamins to support energy, nerve function, and overall health",
+    "warning": "May cause bright yellow urine (harmless). Take with food for better absorption.",
+    "icon": "💊"
+  },
+  "vitamin-d": {
+    "name": "Vitamin D",
+    "purpose": "Supplement to strengthen bones and support calcium absorption",
+    "warning": "Take with food containing fat for better absorption. Excessive intake may cause calcium buildup.",
+    "icon": "💊"
+  },
+  "calcium": {
+    "name": "Calcium",
+    "purpose": "Supplement to strengthen bones and teeth, prevent osteoporosis",
+    "warning": "Take with Vitamin D for better absorption. May cause constipation. Space out from other medications.",
+    "icon": "💊"
+  },
+  "iron": {
+    "name": "Iron",
+    "purpose": "Supplement to treat or prevent iron deficiency anemia",
+    "warning": "Take on an empty stomach with Vitamin C for better absorption. May cause dark stools (harmless). Avoid tea/coffee near dosing time.",
+    "icon": "💊"
+  },
+  "folic-acid": {
+    "name": "Folic Acid",
+    "purpose": "Vitamin supplement essential during pregnancy for baby's brain development. Also treats folate deficiency",
+    "warning": "Safe for most people. Take as directed. Important to start before and during early pregnancy.",
+    "icon": "💊"
+  },
+  "ibuprofen-paracetamol": {
+    "name": "Ibuprofen + Paracetamol (Combiflam)",
+    "purpose": "Combination pain reliever used for headache, toothache, body pain, and fever",
+    "warning": "Take with food. Do not exceed recommended dose. Avoid in patients with stomach ulcers or liver/kidney problems.",
+    "icon": "💊"
+  },
+  "amoxicillin-clavulanate": {
+    "name": "Amoxicillin + Clavulanate (Augmentin)",
+    "purpose": "Strong antibiotic used for severe bacterial infections including sinusitis, pneumonia, and urinary infections",
+    "warning": "Complete the full course. Take with food. May cause diarrhea. Inform doctor if allergic to penicillin.",
+    "icon": "💊"
+  },
+  "cefixime": {
+    "name": "Cefixime",
+    "purpose": "Antibiotic used to treat bacterial infections of the ear, nose, throat, and urinary tract",
+    "warning": "Complete the full course. May cause stomach upset. Inform doctor about any drug allergies.",
+    "icon": "💊"
+  },
+  "doxycycline": {
+    "name": "Doxycycline",
+    "purpose": "Antibiotic used to treat acne, respiratory infections, and urinary infections",
+    "warning": "Avoid sun exposure. Take with plenty of water. Do not lie down for 30 minutes after taking. Avoid dairy near dosing time.",
+    "icon": "💊"
+  },
+  "clindamycin": {
+    "name": "Clindamycin",
+    "purpose": "Antibiotic used to treat serious bacterial infections including skin, bone, and dental infections",
+    "warning": "Complete the full course. Report severe diarrhea immediately. Take with a full glass of water.",
+    "icon": "💊"
+  },
+  "glimepiride": {
+    "name": "Glimepiride",
+    "purpose": "Used to control blood sugar levels in Type 2 diabetes by stimulating insulin release",
+    "warning": "Take with breakfast. May cause low blood sugar — carry sugar/candy. Do not skip meals.",
+    "icon": "💊"
+  },
+  "metoprolol": {
+    "name": "Metoprolol",
+    "purpose": "Used to treat high blood pressure, chest pain, and heart failure",
+    "warning": "Do not stop suddenly. Take with food. May cause fatigue or dizziness. Monitor heart rate regularly.",
+    "icon": "💊"
+  },
+  "clopidogrel": {
+    "name": "Clopidogrel",
+    "purpose": "Blood thinner used to prevent heart attacks and strokes",
+    "warning": "May increase bleeding risk. Inform doctor before surgery or dental procedures. Do not stop without doctor's advice.",
+    "icon": "💊"
+  },
+  "telmisartan": {
+    "name": "Telmisartan",
+    "purpose": "Used to treat high blood pressure and reduce cardiovascular risk",
+    "warning": "May cause dizziness. Avoid potassium-rich foods in excess. Not safe during pregnancy.",
+    "icon": "💊"
+  }
+}

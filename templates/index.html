@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CareSync AI transforms complex medical prescriptions into simple, visual, and voice-guided instructions for everyone.">
+    <title>CareSync AI – Smart Prescription Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Animated background blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="nav-icon">💊</span>
+            <span class="nav-title">CareSync <span class="nav-ai">AI</span></span>
+        </div>
+        <div class="nav-tagline">Smart Prescription Companion</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="main-content">
+        <section class="hero" id="hero-section">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                AI-Powered Medicine Guide
+            </div>
+            <h1 class="hero-title">
+                Understand Your <span class="gradient-text">Prescription</span> Easily
+            </h1>
+            <p class="hero-subtitle">
+                Confused by medical prescriptions? CareSync AI converts complex medicine instructions into 
+                <strong>simple text</strong>, <strong>visual icons</strong>, and <strong>voice guidance</strong> 
+                that anyone can understand.
+            </p>
+        </section>
+
+        <!-- Input Card -->
+        <section class="input-section" id="input-section">
+            <div class="input-card glass-card">
+                <div class="card-header">
+                    <div class="card-icon">📝</div>
+                    <div>
+                        <h2 class="card-title">Enter Your Prescription</h2>
+                        <p class="card-desc">Type or paste the prescription text below</p>
+                    </div>
+                </div>
+
+                <form action="/analyze" method="POST" id="prescription-form">
+                    <div class="textarea-wrapper">
+                        <textarea 
+                            name="prescription" 
+                            id="prescription-input" 
+                            placeholder="Type your prescription here...&#10;&#10;Examples:&#10;• PCM twice daily after food&#10;• Amoxicillin 500mg thrice before food&#10;• Dolo 650 once daily; Pan 40 twice before food"
+                            rows="6"
+                            required
+                            aria-label="Prescription text input"
+                        ></textarea>
+                        <div class="textarea-glow"></div>
+                    </div>
+
+                    <!-- Quick-fill Chips -->
+                    <div class="quick-fill">
+                        <span class="quick-label">Quick examples:</span>
+                        <div class="chip-group" id="chip-group">
+                            <button type="button" class="chip" data-text="PCM twice daily after food">
+                                💊 PCM twice after food
+                            </button>
+                            <button type="button" class="chip" data-text="Amox 500mg thrice daily before food">
+                                💊 Amox thrice before food
+                            </button>
+                            <button type="button" class="chip" data-text="Dolo 650 twice daily after food&#10;Pan 40 once before food&#10;Azithro 500 once daily after food">
+                                📋 Multi-medicine Rx
+                            </button>
+                            <button type="button" class="chip" data-text="Metformin twice daily after food&#10;Amlodipine once daily morning&#10;Atorvastatin once at night">
+                                🏥 Chronic care Rx
+                            </button>
+                        </div>
+                    </div>
+
+                    {% if error %}
+                    <div class="error-message" id="error-message">
+                        <span class="error-icon">⚠️</span>
+                        {{ error }}
+                    </div>
+                    {% endif %}
+
+                    <button type="submit" class="submit-btn" id="submit-btn">
+                        <span class="btn-text">Analyze Prescription</span>
+                        <span class="btn-icon">→</span>
+                        <div class="btn-loader" id="btn-loader">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section class="how-it-works" id="how-it-works">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step-card glass-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📝</div>
+                    <h3>Enter Prescription</h3>
+                    <p>Type or paste the prescription text written by your doctor</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card glass-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">⚙️</div>
+                    <h3>AI Processes</h3>
+                    <p>We identify medicines, timing, dosage, and food instructions</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card glass-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">✅</div>
+                    <h3>Get Guidance</h3>
+                    <p>View simplified instructions with icons and voice support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features-section" id="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">🔤</span>
+                    <div>
+                        <strong>Simple Language</strong>
+                        <p>Medical terms converted to everyday words</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🔊</span>
+                    <div>
+                        <strong>Voice Guidance</strong>
+                        <p>Listen to instructions with one tap</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🎯</span>
+                    <div>
+                        <strong>Visual Icons</strong>
+                        <p>Clear icons for timing and food instructions</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">⚡</span>
+                    <div>
+                        <strong>Instant Results</strong>
+                        <p>No internet needed — works offline too</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <p class="footer-brand">💊 CareSync AI</p>
+            <p class="footer-text">Making healthcare accessible for everyone</p>
+            <p class="footer-note">Built with ❤️ for patients who need clarity</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

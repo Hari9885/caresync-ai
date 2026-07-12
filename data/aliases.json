@@ -1,0 +1,158 @@
+{
+  "pcm": "paracetamol",
+  "para": "paracetamol",
+  "paracet": "paracetamol",
+  "dolo": "paracetamol",
+  "dolo-650": "paracetamol",
+  "dolo650": "paracetamol",
+  "crocin": "paracetamol",
+  "calpol": "paracetamol",
+  "p-650": "paracetamol",
+  "metacin": "paracetamol",
+
+  "amox": "amoxicillin",
+  "amoxyclav": "amoxicillin-clavulanate",
+  "augmentin": "amoxicillin-clavulanate",
+  "moxclav": "amoxicillin-clavulanate",
+
+  "azithro": "azithromycin",
+  "azee": "azithromycin",
+  "zithromax": "azithromycin",
+  "azicip": "azithromycin",
+
+  "ctz": "cetirizine",
+  "cetriz": "cetirizine",
+  "zyrtec": "cetirizine",
+  "okacet": "cetirizine",
+  "allercet": "cetirizine",
+
+  "ibu": "ibuprofen",
+  "brufen": "ibuprofen",
+  "combiflam": "ibuprofen-paracetamol",
+  "ibugesic": "ibuprofen",
+
+  "metf": "metformin",
+  "glycomet": "metformin",
+  "glucophage": "metformin",
+
+  "pan": "pantoprazole",
+  "pan-d": "pantoprazole",
+  "pantop": "pantoprazole",
+  "panto": "pantoprazole",
+
+  "omez": "omeprazole",
+  "omep": "omeprazole",
+  "prilosec": "omeprazole",
+
+  "rantac": "ranitidine",
+  "rani": "ranitidine",
+  "zinetac": "ranitidine",
+  "aciloc": "ranitidine",
+
+  "asp": "aspirin",
+  "ecosprin": "aspirin",
+  "disprin": "aspirin",
+
+  "metro": "metronidazole",
+  "flagyl": "metronidazole",
+  "metrogyl": "metronidazole",
+
+  "oflo": "ofloxacin",
+  "oflox": "ofloxacin",
+
+  "cipro": "ciprofloxacin",
+  "ciplox": "ciprofloxacin",
+
+  "diclo": "diclofenac",
+  "voveran": "diclofenac",
+  "voltaren": "diclofenac",
+
+  "amlo": "amlodipine",
+  "amlip": "amlodipine",
+  "norvasc": "amlodipine",
+
+  "aten": "atenolol",
+  "tenormin": "atenolol",
+
+  "losar": "losartan",
+  "losacar": "losartan",
+  "repace": "losartan",
+
+  "atorva": "atorvastatin",
+  "lipitor": "atorvastatin",
+  "tonact": "atorvastatin",
+
+  "thyronorm": "levothyroxine",
+  "eltroxin": "levothyroxine",
+  "thyrox": "levothyroxine",
+
+  "montek": "montelukast",
+  "montek-lc": "montelukast",
+  "singulair": "montelukast",
+
+  "asthalin": "salbutamol",
+  "ventolin": "salbutamol",
+  "salbu": "salbutamol",
+
+  "domp": "domperidone",
+  "domstal": "domperidone",
+  "vomistop": "domperidone",
+
+  "ondem": "ondansetron",
+  "emeset": "ondansetron",
+  "zofran": "ondansetron",
+
+  "imodium": "loperamide",
+  "lopamide": "loperamide",
+
+  "vit-c": "vitamin-c",
+  "vitc": "vitamin-c",
+  "limcee": "vitamin-c",
+  "celin": "vitamin-c",
+
+  "b-complex": "vitamin-b-complex",
+  "bcomplex": "vitamin-b-complex",
+  "becosules": "vitamin-b-complex",
+  "neurobion": "vitamin-b-complex",
+
+  "vit-d": "vitamin-d",
+  "vitd": "vitamin-d",
+  "d3": "vitamin-d",
+  "calcirol": "vitamin-d",
+
+  "shelcal": "calcium",
+  "calci": "calcium",
+  "calcitas": "calcium",
+
+  "fefol": "iron",
+  "autrin": "iron",
+  "ferrous": "iron",
+
+  "folicacid": "folic-acid",
+  "folvite": "folic-acid",
+
+  "cefix": "cefixime",
+  "taxim-o": "cefixime",
+  "zifi": "cefixime",
+
+  "doxy": "doxycycline",
+  "doxt": "doxycycline",
+
+  "clinda": "clindamycin",
+  "dalacin": "clindamycin",
+
+  "glim": "glimepiride",
+  "amaryl": "glimepiride",
+  "glimep": "glimepiride",
+
+  "metxl": "metoprolol",
+  "betaloc": "metoprolol",
+
+  "clopid": "clopidogrel",
+  "plavix": "clopidogrel",
+  "clopilet": "clopidogrel",
+
+  "telma": "telmisartan",
+  "telsar": "telmisartan",
+  "telmikind": "telmisartan"
+}
